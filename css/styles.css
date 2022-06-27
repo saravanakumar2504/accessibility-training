@@ -8,16 +8,24 @@
   margin-bottom: -1px !important;
   position: relative;
 }
+
 .tab-content {
   padding: 2rem;
 }
+
 .tab-pane {
   display: none;
 }
+
 .tab-pane.is-active {
   display: block;
   position: relative;
 }
+
+.tab.span {
+  color: #0e5c90;
+}
+
 .is-active {
   display: initial;
 }
@@ -41,6 +49,7 @@
   overflow: hidden;
   max-width: 100%;
 }
+
 .embed-container iframe,
 .embed-container object,
 .embed-container embed {
@@ -80,18 +89,18 @@
   position: relative;
   transition: all 0.2s ease-in-out;
 }
+
 .is-shady:hover {
   box-shadow: 0 10px 16px rgba(0, 0, 0, 0.13), 0 6px 6px rgba(0, 0, 0, 0.19);
 }
-
 
 .has-same-height .card {
   height: 350px;
   overflow: hidden;
 }
 
-.skills-content .media + .media {
-  margin-top: .5rem;
+.skills-content .media+.media {
+  margin-top: 0.5rem;
 }
 
 .skills-content .progress {
@@ -103,8 +112,8 @@
 }
 
 .info-tiles {
-  margin: .75rem auto;
-  padding: 0 .75rem;
+  margin: 0.75rem auto;
+  padding: 0 0.75rem;
 }
 
 .button.is-primary.is-alt {
@@ -115,20 +124,21 @@
   line-height: 2.8;
   margin-bottom: 1rem;
 }
+
 .post {
   margin: 1rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #E6EAEE;
+  border-bottom: 1px solid #e6eaee;
 }
+
 .post:last-child {
   padding-bottom: 0;
   border-bottom: none;
 }
 
 .forum-list li {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
-
 
 @media screen and (max-width: 1087px) {
   .navbar-menu {
@@ -147,6 +157,11 @@
 
 li {
   list-style: none;
+}
+
+.hero.is-info {
+  background-color: #3273dc;
+  color: #fff;
 }
 
 .hero.is-fullheight {
@@ -175,4 +190,70 @@ li {
   width: 40px;
   height: 40px;
   background-size: contain;
+}
+
+.skip_navigation {
+  color: white;
+}
+
+.skip_navigation:hover,
+.skip_navigation:focus {
+  background-color: white;
+  color: black;
+}
+
+.has-text-grey-light {
+  color: #47515c !important;
+}
+
+.links a {
+  color: #00008f;
+}
+
+.links a:hover {
+  color: black;
+}
+
+h5.subtitle.is-5 {
+  color: #030303;
+  background-color: transparent;
+}
+
+.help.is-success {
+  color: #007b2b;
+}
+
+span.tag.is-primary.is-medium {
+  background-color: #00574a;
+}
+
+span.tag.is-success.is-medium {
+  background-color: #007b2b;
+}
+
+.help.is-danger {
+  color: #a90526;
+}
+
+span.tag.is-danger {
+  background-color: #94001e;
+}
+
+.button.is-info {
+  background-color: #0a578a;
+  border-color: transparent;
+  color: #fff;
+}
+
+.breadcrumb li a {
+  color: #ccc;
+}
+
+.breadcrumb li a:hover {
+  color: white;
+  background-color: #5c7cab;
+}
+
+.breadcrumb li:first-child a {
+  padding-left: 25px;
 }
