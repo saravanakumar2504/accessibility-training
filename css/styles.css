@@ -282,3 +282,11 @@ span.tag.is-danger {
   opacity: 1;
   border-bottom-color: #dbdbdb;
 }
+
+.visually-hidden {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: auto;
+  overflow: hidden;
+}
