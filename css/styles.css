@@ -99,7 +99,7 @@
   overflow: hidden;
 }
 
-.skills-content .media+.media {
+.skills-content .media + .media {
   margin-top: 0.5rem;
 }
 
@@ -256,4 +256,29 @@ span.tag.is-danger {
 
 .breadcrumb li:first-child a {
   padding-left: 25px;
+}
+
+.tabs.is-boxed.is-centered.main-menu button {
+  opacity: 0.9;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+  background-color: inherit;
+  align-items: center;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  color: inherit;
+  display: flex;
+  justify-content: center;
+  padding: 0.5em 1em;
+  vertical-align: top;
+}
+.tabs.is-boxed.is-centered.main-menu .is-active {
+  opacity: 1;
+  background-color: #fff;
+  color: #209cee;
+}
+.tabs.is-boxed.is-centered.main-menu button:hover {
+  background-color: rgba(10, 10, 10, 0.1);
+  opacity: 1;
+  border-bottom-color: #dbdbdb;
 }
