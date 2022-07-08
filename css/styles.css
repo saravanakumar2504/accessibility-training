@@ -290,3 +290,7 @@ span.tag.is-danger {
   top: auto;
   overflow: hidden;
 }
+
+a:-webkit-any-link:focus-visible, input:focus-visible, .select select:focus, .textarea:focus, .button:focus {
+  outline-offset: 2px;
+}

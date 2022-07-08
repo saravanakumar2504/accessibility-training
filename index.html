@@ -23,7 +23,7 @@
             </a>
           </div>
 
-          <nav id="navbarMenu" class="navbar-menu" aria-label="header navigation">
+          <nav id="navbarMenu" class="navbar-menu" aria-label="header navigation" aria-haspopup="menu">
             <ul class="navbar-end">
               <li class="navbar-item">
                 <a class="button is-white is-outlined">
@@ -59,9 +59,9 @@
               </li>
           </nav>
         </div>
-
+      </nav>
     </div>
-    </nav>
+    
     <nav aria-label="Breadcrumb" class="breadcrumb">
       <ul>
         <li><a href="#about">About Us</a></li>
@@ -76,8 +76,6 @@
         <li><a href="#links">Helpful links</a></li>
       </ul>
     </nav>
-
-    </div>
 
     <div class="hero-body">
       <div class="container has-text-centered">
@@ -104,6 +102,8 @@
         </div>
       </div>
     </div>
+
+    <span class="visually-hidden time-dom"  aria-live='polite'></span>
   </header>
 
   <main id="main-content">
@@ -307,19 +307,19 @@
       <div class="tabs is-boxed is-centered main-menu" id="nav">
         <ul>
           <li data-target="pane-1" id="1" class="is-active">
-            <button>
+            <button role="tab">
               <span class="icon is-small"><i class="fa fa-image" aria-hidden="true"></i></span>
               <span class="tab span">Pictures</span>
             </button>
           </li>
           <li data-target="pane-3" id="3">
-            <button>
+            <button role="tab">
               <span class="icon is-small"><i class="fab fa-superpowers" aria-hidden="true"></i></span>
               <span>Team</span>
             </button>
           </li>
           <li data-target="pane-4" id="4">
-            <button>
+            <button role="tab">
               <span class="icon is-small"><i class="fa fa-film" aria-hidden="true"></i></span>
               <span>Video</span>
             </button>
@@ -945,7 +945,7 @@
           <div class="field">
             <label class="label" for="emailId">Email</label>
             <div class="control has-icons-left has-icons-right">
-              <input class="input is-danger" type="email" name="emailId" aria-label="emailId" placeholder="Email input"
+              <input class="input is-danger" type="email" name="emailId" aria-label="Email input" placeholder="Email input"
                 value="hello@">
               <span class="icon is-small is-left">
                 <i class="fas fa-envelope" aria-hidden="true"></i>
@@ -988,11 +988,11 @@
           <div class="field">
             <div class="control">
               <label class="radio">
-                <input type="radio" name="question" value="Yes">
+                <input type="radio" name="question" value="Yes" aria-label="yes">
                 Yes
               </label>
               <label class="radio">
-                <input type="radio" name="question" value="No">
+                <input type="radio" name="question" value="No" aria-label="no">
                 No
               </label>
             </div>

@@ -1,14 +1,23 @@
-(function() {
+(function () {
   var burger = document.querySelector(".burger");
   var menu = document.querySelector("#" + burger.dataset.target);
-  burger.addEventListener("click", function() {
+  burger.addEventListener("click", function () {
     burger.classList.toggle("is-active");
     menu.classList.toggle("is-active");
   });
+  document.querySelector(".time-dom").innerHTML = "";
+  setInterval(() => {
+    document.querySelector(".time-dom").innerHTML = "";
+    setTimeout(() => {
+      document.querySelector(
+        ".time-dom"
+      ).innerHTML = `Current time is ${new Date().getHours()}:${new Date().getMinutes()}: Minutes ${new Date().getSeconds()}: Seconds`;
+    });
+  }, 60000);
 })();
 
-document.querySelectorAll("#nav li").forEach(function(navEl) {
-  navEl.onclick = function() {
+document.querySelectorAll("#nav li").forEach(function (navEl) {
+  navEl.onclick = function () {
     toggleTab(this.id, this.dataset.target);
   };
 });
@@ -16,7 +25,7 @@ document.querySelectorAll("#nav li").forEach(function(navEl) {
 function toggleTab(selectedNav, targetId) {
   var navEls = document.querySelectorAll("#nav li");
 
-  navEls.forEach(function(navEl) {
+  navEls.forEach(function (navEl) {
     if (navEl.id == selectedNav) {
       navEl.classList.add("is-active");
     } else {
@@ -28,7 +37,7 @@ function toggleTab(selectedNav, targetId) {
 
   var tabs = document.querySelectorAll(".tab-pane");
 
-  tabs.forEach(function(tab) {
+  tabs.forEach(function (tab) {
     if (tab.id == targetId) {
       tab.style.display = "block";
     } else {
