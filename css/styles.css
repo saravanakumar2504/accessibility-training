@@ -1,3 +1,4 @@
+
 .hero-bg {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../img/accessibility-hero-banner.jpg") no-repeat center center fixed;
@@ -13,21 +14,29 @@
   padding: 2rem;
 }
 
-.tab-pane {
-  display: none;
+
+
+.hero.is-info .tabs.is-boxed li a.is-active {
+  color: royalblue;
+  background-color: white;
 }
 
-.tab-pane.is-active {
-  display: block;
-  position: relative;
+.host {
+  text-decoration:underline;
 }
 
-.tab.span {
-  color: #0e5c90;
+
+.tag:not(body).is-primary {
+  background-color: #005c4e;
 }
 
-.is-active {
-  display: initial;
+.tag:not(body).is-danger {
+  background-color: #b30024;
+  color: #fffff0;
+}
+
+.tag:not(body).is-success {
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .cent {
@@ -99,7 +108,7 @@
   overflow: hidden;
 }
 
-.skills-content .media + .media {
+.skills-content .media+.media {
   margin-top: 0.5rem;
 }
 
@@ -192,16 +201,6 @@ li {
   background-size: contain;
 }
 
-.skip_navigation {
-  color: white;
-}
-
-.skip_navigation:hover,
-.skip_navigation:focus {
-  background-color: white;
-  color: black;
-}
-
 .has-text-grey-light {
   color: #47515c !important;
 }
@@ -212,6 +211,11 @@ li {
 
 .links a:hover {
   color: black;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
 }
 
 h5.subtitle.is-5 {
@@ -251,46 +255,78 @@ span.tag.is-danger {
 
 .breadcrumb li a:hover {
   color: white;
-  background-color: #5c7cab;
+  background-color: grey;
 }
 
 .breadcrumb li:first-child a {
   padding-left: 25px;
 }
 
-.tabs.is-boxed.is-centered.main-menu button {
-  opacity: 0.9;
-  border: 1px solid transparent;
-  border-radius: 4px 4px 0 0;
-  background-color: inherit;
-  align-items: center;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  color: inherit;
-  display: flex;
-  justify-content: center;
-  padding: 0.5em 1em;
-  vertical-align: top;
+nav.breadcrumb [aria-current="page"] {
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
 }
-.tabs.is-boxed.is-centered.main-menu .is-active {
-  opacity: 1;
+
+
+.navbar-menu {
+  position: relative;
+}
+
+.navbar-item .sub-menu {
+  position: absolute;
+  display: none;
   background-color: #fff;
-  color: #209cee;
+  padding: 0.7rem;
+  top: 3.5rem;
+  border-radius: 0.2rem;
+  line-height: 1.7;
+  white-space: nowrap;
+
 }
-.tabs.is-boxed.is-centered.main-menu button:hover {
-  background-color: rgba(10, 10, 10, 0.1);
-  opacity: 1;
-  border-bottom-color: #dbdbdb;
+
+.navbar-item .sub-menu li {
+  width: 100%;
 }
+
+.navbar-item .sub-menu [role="separator"] {
+  width: 100%;
+  height: 2px;
+  background-color: #0000003a;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.navbar-item .sub-menu a {
+  padding: 5px;
+}
+
+.navbar-item .sub-menu li:hover {
+  background-color: #f3f3f3;
+}
+
 
 .visually-hidden {
   position: absolute;
-  width: 0;
-  height: 0;
-  top: auto;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
   overflow: hidden;
+  padding: 0;
+  border: 0;
 }
 
-a:-webkit-any-link:focus-visible, input:focus-visible, .select select:focus, .textarea:focus, .button:focus {
-  outline-offset: 2px;
+a[target="_blank"]::after {
+  content: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/77020/external-link-alt-solid.svg);
+  display: inline-block;
+  margin-left: 0.2em;
+  width: 1em;
+  height: 1em;
+}
+
+.visually-hidden:focus {
+  clip: auto;
+  height: auto;
+  width: auto;
+  background-color: white;
 }
